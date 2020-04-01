@@ -116,9 +116,9 @@ final class SnsTransportTest extends TestCase
             "\n",
             PHP_EOL,
             <<<'EOF'
-Unable to send an SMS for recipients:
-- +2000: The request signature we calculated does not match the signature you provided. (SignatureDoesNotMatch)
-EOF
+                Unable to send an SMS for recipients:
+                - +2000: The request signature we calculated does not match the signature you provided. (SignatureDoesNotMatch)
+                EOF
         ));
 
         $message = new Sms();

@@ -148,8 +148,6 @@ class SnsTransport extends AbstractApiTransport
      * Build the attributes for the request body.
      *
      * @param Sms $sms The SMS message
-     *
-     * @return array
      */
     protected function buildAttributes(Sms $sms): array
     {

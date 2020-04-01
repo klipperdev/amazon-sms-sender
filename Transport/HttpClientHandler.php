@@ -82,8 +82,6 @@ class HttpClientHandler
      * @param ResponseInterface $response The http client response
      *
      * @throws
-     *
-     * @return array
      */
     private function prepareResponseHeaders(ResponseInterface $response): array
     {
@@ -103,8 +101,6 @@ class HttpClientHandler
      * @param ResponseInterface $response The http client response
      *
      * @throws
-     *
-     * @return array
      */
     private function prepareErrorContext(RequestInterface $request, ResponseInterface $response): array
     {

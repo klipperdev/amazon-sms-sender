@@ -20,8 +20,6 @@ class UnstructuredHeader extends BaseUnstructuredHeader
 {
     /**
      * Get the data type.
-     *
-     * @return string
      */
     public function getDataType(): string
     {

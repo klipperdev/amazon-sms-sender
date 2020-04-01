@@ -13,8 +13,8 @@ namespace Klipper\Bridge\SmsSender\Amazon\Tests\Transport;
 
 use Aws\CommandInterface;
 use Aws\Exception\AwsException;
-use Klipper\Bridge\SmsSender\Amazon\Transport\HttpClientHandler;
 use GuzzleHttp\Promise\PromiseInterface;
+use Klipper\Bridge\SmsSender\Amazon\Transport\HttpClientHandler;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;

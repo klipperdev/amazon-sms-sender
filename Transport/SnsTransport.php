@@ -17,8 +17,8 @@ use Aws\Sns\SnsClient;
 use Klipper\Bridge\SmsSender\Amazon\Mime\Header\SenderId;
 use Klipper\Bridge\SmsSender\Amazon\Mime\Header\SmsType;
 use Klipper\Bridge\SmsSender\Amazon\Mime\Header\UnstructuredHeader;
+use Klipper\Component\SmsSender\Envelope;
 use Klipper\Component\SmsSender\Mime\Sms;
-use Klipper\Component\SmsSender\SmsEnvelope;
 use Klipper\Component\SmsSender\Transport\AbstractApiTransport;
 use Klipper\Component\SmsSender\Transport\ErrorResult;
 use Klipper\Component\SmsSender\Transport\Result;
@@ -106,7 +106,7 @@ class SnsTransport extends AbstractApiTransport
     /**
      * {@inheritdoc}
      */
-    protected function doSendSms(Sms $sms, SmsEnvelope $envelope, Result $result): void
+    protected function doSendSms(Sms $sms, Envelope $envelope, Result $result): void
     {
         $this->addDefaultAttributes($sms);
 

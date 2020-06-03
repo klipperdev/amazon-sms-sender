@@ -21,9 +21,6 @@ use Klipper\Component\SmsSender\Transport\TransportInterface;
  */
 class SnsTransportFactory extends AbstractTransportFactory
 {
-    /**
-     * {@inheritdoc}
-     */
     public function create(Dsn $dsn): TransportInterface
     {
         $scheme = $dsn->getScheme();
@@ -44,9 +41,6 @@ class SnsTransportFactory extends AbstractTransportFactory
         throw new UnsupportedSchemeException($dsn, ['api']);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function supports(Dsn $dsn): bool
     {
         return 'sns' === $dsn->getHost();

@@ -18,11 +18,6 @@ class SenderId extends UnstructuredHeader
 {
     public const NAME = 'AWS.SNS.SMS.SenderID';
 
-    /**
-     * Constructor.
-     *
-     * @param string $value The value
-     */
     public function __construct(string $value)
     {
         parent::__construct(static::NAME, substr($value, 0, 11));

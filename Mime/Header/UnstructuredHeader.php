@@ -18,9 +18,6 @@ use Symfony\Component\Mime\Header\UnstructuredHeader as BaseUnstructuredHeader;
  */
 class UnstructuredHeader extends BaseUnstructuredHeader
 {
-    /**
-     * Get the data type.
-     */
     public function getDataType(): string
     {
         return 'String';

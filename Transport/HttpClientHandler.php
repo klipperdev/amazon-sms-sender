@@ -24,16 +24,8 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
  */
 class HttpClientHandler
 {
-    /**
-     * @var HttpClientInterface
-     */
-    private $client;
+    private HttpClientInterface $client;
 
-    /**
-     * Constructor.
-     *
-     * @param HttpClientInterface $client The http client
-     */
     public function __construct(HttpClientInterface $client)
     {
         $this->client = $client;

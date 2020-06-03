@@ -30,10 +30,7 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
  */
 final class SnsTransportTest extends TestCase
 {
-    /**
-     * @var EventDispatcher
-     */
-    private $dispatcher;
+    private ?EventDispatcher $dispatcher = null;
 
     /**
      * @var HttpClientInterface|MockObject
@@ -45,10 +42,7 @@ final class SnsTransportTest extends TestCase
      */
     private $logger;
 
-    /**
-     * @var SnsTransport
-     */
-    private $transport;
+    private ?SnsTransport $transport = null;
 
     protected function setUp(): void
     {

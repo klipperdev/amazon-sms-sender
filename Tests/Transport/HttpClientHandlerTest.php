@@ -45,10 +45,7 @@ final class HttpClientHandlerTest extends TestCase
      */
     private $request;
 
-    /**
-     * @var HttpClientHandler
-     */
-    private $handler;
+    private ?HttpClientHandler $handler = null;
 
     protected function setUp(): void
     {

@@ -18,19 +18,11 @@ class MaxPrice extends UnstructuredHeader
 {
     public const NAME = 'AWS.SNS.SMS.MaxPrice';
 
-    /**
-     * Constructor.
-     *
-     * @param string $value The value
-     */
     public function __construct(string $value)
     {
         parent::__construct(static::NAME, $value);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getDataType(): string
     {
         return 'Number';

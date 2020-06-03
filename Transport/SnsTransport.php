@@ -32,24 +32,13 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class SnsTransport extends AbstractApiTransport
 {
-    /**
-     * @var null|string
-     */
-    private $senderId;
+    private ?string $senderId;
+
+    private ?string $type;
+
+    private SnsClient $sns;
 
     /**
-     * @var null|string
-     */
-    private $type;
-
-    /**
-     * @var SnsClient
-     */
-    private $sns;
-
-    /**
-     * Constructor.
-     *
      * @param string                        $accessKey  The aws access key
      * @param string                        $secretKey  The aws secret key
      * @param null|string                   $region     The aws region
@@ -83,9 +72,6 @@ class SnsTransport extends AbstractApiTransport
         ]);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getName(): string
     {
         return sprintf(
@@ -95,17 +81,11 @@ class SnsTransport extends AbstractApiTransport
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function hasRequiredFrom(): bool
     {
         return false;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function doSendSms(Sms $sms, Envelope $envelope, Result $result): void
     {
         $this->addDefaultAttributes($sms);
@@ -126,11 +106,6 @@ class SnsTransport extends AbstractApiTransport
         }
     }
 
-    /**
-     * Add the default attributes in the message.
-     *
-     * @param Sms $sms The SMS message
-     */
     protected function addDefaultAttributes(Sms $sms): void
     {
         $headers = $sms->getHeaders();

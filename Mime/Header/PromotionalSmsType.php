@@ -16,9 +16,6 @@ namespace Klipper\Bridge\SmsSender\Amazon\Mime\Header;
  */
 class PromotionalSmsType extends SmsType
 {
-    /**
-     * Constructor.
-     */
     public function __construct()
     {
         parent::__construct(static::TYPE_PROMOTIONAL);

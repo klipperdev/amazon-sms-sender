@@ -22,11 +22,6 @@ class SmsType extends UnstructuredHeader
 
     public const TYPE_PROMOTIONAL = 'Promotional';
 
-    /**
-     * Constructor.
-     *
-     * @param string $value The SMS type
-     */
     public function __construct(string $value)
     {
         $value = static::TYPE_TRANSACTIONAL === $value ? $value : static::TYPE_PROMOTIONAL;

@@ -37,9 +37,9 @@ class HttpClientHandler
      * @param CommandInterface $cmd     The aws command
      * @param RequestInterface $request The aws request
      *
-     * @throws
-     *
      * @return \Exception|Promise\PromiseInterface
+     *
+     * @throws
      */
     public function __invoke(CommandInterface $cmd, RequestInterface $request)
     {
